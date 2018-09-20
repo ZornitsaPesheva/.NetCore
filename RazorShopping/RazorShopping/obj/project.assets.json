@@ -12224,11 +12224,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\zorry\\Documents\\Visual Studio 2017\\Projects\\RazorShopping\\RazorShopping\\RazorShopping.csproj",
+      "projectUniqueName": "C:\\Users\\zorry\\Documents\\GitHub\\.NetCore\\RazorShopping\\RazorShopping\\RazorShopping.csproj",
       "projectName": "RazorShopping",
-      "projectPath": "C:\\Users\\zorry\\Documents\\Visual Studio 2017\\Projects\\RazorShopping\\RazorShopping\\RazorShopping.csproj",
+      "projectPath": "C:\\Users\\zorry\\Documents\\GitHub\\.NetCore\\RazorShopping\\RazorShopping\\RazorShopping.csproj",
       "packagesPath": "C:\\Users\\zorry\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\zorry\\Documents\\Visual Studio 2017\\Projects\\RazorShopping\\RazorShopping\\obj\\",
+      "outputPath": "C:\\Users\\zorry\\Documents\\GitHub\\.NetCore\\RazorShopping\\RazorShopping\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
