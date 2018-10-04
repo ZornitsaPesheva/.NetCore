@@ -37,3 +37,8 @@ C:\Users\zorry\Documents\GitHub\.NetCore\MvcShopping\MvcShopping\obj\Debug\netco
 C:\Users\zorry\Documents\GitHub\.NetCore\MvcShopping\MvcShopping\obj\Debug\netcoreapp2.1\Razor\Views\Products\Details.g.cshtml.cs
 C:\Users\zorry\Documents\GitHub\.NetCore\MvcShopping\MvcShopping\obj\Debug\netcoreapp2.1\Razor\Views\Products\Edit.g.cshtml.cs
 C:\Users\zorry\Documents\GitHub\.NetCore\MvcShopping\MvcShopping\obj\Debug\netcoreapp2.1\Razor\Views\Products\Index.g.cshtml.cs
+C:\Users\zorry\Documents\GitHub\.NetCore\MvcShopping\MvcShopping\obj\Debug\netcoreapp2.1\Razor\Views\ShoppingDays\Create.g.cshtml.cs
+C:\Users\zorry\Documents\GitHub\.NetCore\MvcShopping\MvcShopping\obj\Debug\netcoreapp2.1\Razor\Views\ShoppingDays\Delete.g.cshtml.cs
+C:\Users\zorry\Documents\GitHub\.NetCore\MvcShopping\MvcShopping\obj\Debug\netcoreapp2.1\Razor\Views\ShoppingDays\Details.g.cshtml.cs
+C:\Users\zorry\Documents\GitHub\.NetCore\MvcShopping\MvcShopping\obj\Debug\netcoreapp2.1\Razor\Views\ShoppingDays\Edit.g.cshtml.cs
+C:\Users\zorry\Documents\GitHub\.NetCore\MvcShopping\MvcShopping\obj\Debug\netcoreapp2.1\Razor\Views\ShoppingDays\Index.g.cshtml.cs
