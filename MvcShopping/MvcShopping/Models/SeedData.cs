@@ -42,6 +42,29 @@ namespace MvcShopping.Models
                         Price = 5.39M
                     }
                 );
+
+                context.SaveChanges();
+
+                if (context.ShoppingDay.Any())
+                {
+                    return;
+                }
+
+                var sd = new ShoppingDay();
+
+                context.ShoppingDay.AddRange(
+                    new ShoppingDay
+                    {
+                        ShoppingDate = DateTime.Parse("2018-9-30"),
+                        Sum = 28.25M
+                    },
+
+                    new ShoppingDay
+                    {
+                        ShoppingDate = DateTime.Parse("2018-10-7"),
+                        Sum = 15.67M
+                    }
+                );
                 context.SaveChanges();
             }
         }

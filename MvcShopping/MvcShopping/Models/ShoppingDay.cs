@@ -14,8 +14,8 @@ namespace MvcShopping.Models
         [Display(Name = "Shopping Date")]
         [DataType(DataType.Date)]
         public DateTime ShoppingDate { get; set; }
-        public Dictionary<int, string> BougthOutProducts =
-            new Dictionary<int, string>();
+        //public Dictionary<string, int> BougthOutProducts =
+        //    new Dictionary<string, int>();
 
         [Column(TypeName = "decimal(10, 2)")]
         public decimal Sum { get; set; }
