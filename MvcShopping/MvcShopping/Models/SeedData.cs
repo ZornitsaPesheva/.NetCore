@@ -61,6 +61,12 @@ namespace MvcShopping.Models
 
                     new ShoppingDay
                     {
+                        ShoppingDate = DateTime.Parse("2018-10-4"),
+                        Sum = 14.29M
+                    },
+
+                    new ShoppingDay
+                    {
                         ShoppingDate = DateTime.Parse("2018-10-7"),
                         Sum = 15.67M
                     }
