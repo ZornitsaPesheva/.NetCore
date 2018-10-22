@@ -56,20 +56,31 @@ namespace MvcShopping.Models
                     new ShoppingDay
                     {
                         ShoppingDate = DateTime.Parse("2018-9-30"),
+                        Store = "DM",
                         Sum = 28.25M
                     },
 
                     new ShoppingDay
                     {
                         ShoppingDate = DateTime.Parse("2018-10-4"),
+                        Store = "Lidl",
                         Sum = 14.29M
                     },
 
                     new ShoppingDay
                     {
+                        ShoppingDate = DateTime.Parse("2018-10-6"),
+                        Store = "Lidl",
+                        Sum = 18.42M
+                    },
+
+                    new ShoppingDay
+                    {
                         ShoppingDate = DateTime.Parse("2018-10-7"),
+                        Store = "Lidl",
                         Sum = 15.67M
                     }
+
                 );
                 context.SaveChanges();
             }

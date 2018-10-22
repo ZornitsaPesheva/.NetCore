@@ -9,11 +9,22 @@
 <p>
     <a asp-action="Create">Create New</a>
 </p>
+
+<form asp-controller="ShoppingDays" asp-action="Index" method="get">
+    <p>
+        Store: <input type="date" name="searchDate">
+        <input type="submit" value="Filter" />
+    </p>
+</form>
+
 <table class="table">
     <thead>
         <tr>
             <th>
                 @Html.DisplayNameFor(model => model.ShoppingDate)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Store)
             </th>
             <th>
                 @Html.DisplayNameFor(model => model.Sum)
@@ -26,6 +37,9 @@
         <tr>
             <td>
                 @Html.DisplayFor(modelItem => item.ShoppingDate)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Store)
             </td>
             <td>
                 @Html.DisplayFor(modelItem => item.Sum)

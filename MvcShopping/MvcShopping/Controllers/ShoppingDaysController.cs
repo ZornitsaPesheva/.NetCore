@@ -19,9 +19,17 @@ namespace MvcShopping.Controllers
         }
 
         // GET: ShoppingDays
-        public async Task<IActionResult> Index()
+        public async Task<IActionResult> Index(DateTime searchDate)
         {
-            return View(await _context.ShoppingDay.ToListAsync());
+            var records = from r in _context.ShoppingDay
+                       select r;
+
+            if (!(searchDate == DateTime.MinValue))
+            {
+                records = records.Where(s => s.ShoppingDate==(searchDate));
+            }
+
+            return View(await records.ToListAsync());
         }
 
         // GET: ShoppingDays/Details/5
@@ -53,7 +61,7 @@ namespace MvcShopping.Controllers
         // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Create([Bind("ID,ShoppingDate,Sum")] ShoppingDay shoppingDay)
+        public async Task<IActionResult> Create([Bind("ID,ShoppingDate,Store,Sum")] ShoppingDay shoppingDay)
         {
             if (ModelState.IsValid)
             {
@@ -85,7 +93,7 @@ namespace MvcShopping.Controllers
         // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Edit(int id, [Bind("ID,ShoppingDate,Sum")] ShoppingDay shoppingDay)
+        public async Task<IActionResult> Edit(int id, [Bind("ID,ShoppingDate,Store,Sum")] ShoppingDay shoppingDay)
         {
             if (id != shoppingDay.ID)
             {

@@ -17,6 +17,8 @@ namespace MvcShopping.Models
         //public Dictionary<string, int> BougthOutProducts =
         //    new Dictionary<string, int>();
 
+        public string Store { get; set; }
+
         [Column(TypeName = "decimal(10, 2)")]
         public decimal Sum { get; set; }
     }
