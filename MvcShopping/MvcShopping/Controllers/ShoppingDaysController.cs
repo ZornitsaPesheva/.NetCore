@@ -19,8 +19,12 @@ namespace MvcShopping.Controllers
         }
 
         // GET: ShoppingDays
-        public async Task<IActionResult> Index(DateTime searchDate)
+        public async Task<IActionResult> Index(string shoppingStore, DateTime searchDate)
         {
+            IQueryable<string> storeQuery = from s in _context.ShoppingDay
+                                            orderby s.Store
+                                            select s.Store;
+
             var records = from r in _context.ShoppingDay
                        select r;
 
@@ -29,7 +33,17 @@ namespace MvcShopping.Controllers
                 records = records.Where(s => s.ShoppingDate==(searchDate));
             }
 
-            return View(await records.ToListAsync());
+            if (!String.IsNullOrEmpty(shoppingStore))
+            {
+                records = records.Where(x => x.Store == shoppingStore);
+            }
+
+            var storeVM = new StoreViewModel();
+            storeVM.Stores = new SelectList(await storeQuery.Distinct().ToListAsync());
+            storeVM.ShoppingDays = await records.ToListAsync();
+            storeVM.SearchDate = searchDate;    
+
+            return View(storeVM);
         }
 
         // GET: ShoppingDays/Details/5

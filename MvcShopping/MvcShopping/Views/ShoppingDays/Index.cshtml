@@ -1,4 +1,4 @@
-﻿@model IEnumerable<MvcShopping.Models.ShoppingDay>
+﻿@model MvcShopping.Models.StoreViewModel
 
 @{
     ViewData["Title"] = "Index";
@@ -12,7 +12,11 @@
 
 <form asp-controller="ShoppingDays" asp-action="Index" method="get">
     <p>
-        Store: <input type="date" name="searchDate">
+        <select asp-for="ShoppingStore" asp-items="Model.Stores">
+            <option value="">All</option>
+        </select>
+
+        Date: <input type="date" name="searchDate">
         <input type="submit" value="Filter" />
     </p>
 </form>
@@ -21,19 +25,19 @@
     <thead>
         <tr>
             <th>
-                @Html.DisplayNameFor(model => model.ShoppingDate)
+                @Html.DisplayNameFor(model => model.ShoppingDays[0].ShoppingDate)
             </th>
             <th>
-                @Html.DisplayNameFor(model => model.Store)
+                @Html.DisplayNameFor(model => model.ShoppingDays[0].Store)
             </th>
             <th>
-                @Html.DisplayNameFor(model => model.Sum)
+                @Html.DisplayNameFor(model => model.ShoppingDays[0].Sum)
             </th>
             <th></th>
         </tr>
     </thead>
     <tbody>
-@foreach (var item in Model) {
+@foreach (var item in Model.ShoppingDays) {
         <tr>
             <td>
                 @Html.DisplayFor(modelItem => item.ShoppingDate)
